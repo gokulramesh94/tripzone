@@ -1,0 +1,42 @@
+.tripzone-container {
+  &.large {
+    width: 100%;
+  }
+  &.medium {
+    width: 75%;
+  }
+  &.small {
+    width: 50%;
+  }
+  &.tiny {
+    width: 25%;
+  }
+  &.padding-large {
+    padding: 0 200px;
+  }
+  &.padding-medium {
+    padding: 0 100px;
+  }
+  &.padding-small {
+    padding: 0 50px;
+  }
+  &.padding-tiny {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .tripzone-container {
+    &.padding-large {
+      padding: 0 25px;
+    }
+    &.padding-medium {
+      padding: 0 15px;
+    }
+    &.padding-small {
+      padding: 0 10px;
+    }
+    &.padding-tiny {
+      padding: 0 5px;
+    }
+  }
+}

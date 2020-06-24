@@ -9,8 +9,22 @@ const Strings = {
       WORLD_CLOCK: "http://worldclockapi.com/api/json/est/now"
     },
     USER_DETAILS: {
-      username: "nijin",
-      password: "password"
+      NIJIN: {
+        username: "nijin",
+        password: "password"
+      },
+      NIRANJAN: {
+        username: "niranjan",
+        password: "password"
+      },
+      ASHOK: {
+        username: "ashok",
+        password: "password"
+      }
+    },
+    DATE_TIME_FORMAT: {
+      TIME: "hh:mm",
+      DATE: "DD MMM YY"
     }
   }
 };
