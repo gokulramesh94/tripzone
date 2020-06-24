@@ -1,3 +1,4 @@
 import { loginUser } from "./UserInfoService";
+import { getWorldClocks } from "./TimeZoneService";
 
-export { loginUser };
+export { loginUser, getWorldClocks };
