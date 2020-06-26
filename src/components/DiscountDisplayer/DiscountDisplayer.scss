@@ -1,0 +1,12 @@
+@import "../../constants/_variables.scss";
+
+.discount-displayer-wrapper {
+  display: flex;
+  flex-direction: column;
+  .discount-displayer-title {
+    font-size: $regular15;
+  }
+  .discount-displayer-price {
+    font-weight: bold;
+  }
+}

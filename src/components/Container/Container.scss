@@ -1,0 +1,56 @@
+@import "../../constants/_variables.scss";
+
+.tripzone-container {
+  &.grey{
+    background-color: $container-grey;
+  }
+  &.blue{
+    background-color: $container-blue;
+  }
+  &.yellow{
+    background-color: $container-yellow;
+  }
+  &.green{
+    background-color: $container-green;
+  }
+  &.large {
+    width: 100%;
+  }
+  &.medium {
+    width: 75%;
+  }
+  &.small {
+    width: 50%;
+  }
+  &.tiny {
+    width: 25%;
+  }
+  &.padding-large {
+    padding: 200px;
+  }
+  &.padding-medium {
+    padding: 100px;
+  }
+  &.padding-small {
+    padding: 50px;
+  }
+  &.padding-tiny {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .tripzone-container {
+    &.padding-large {
+      padding: 25px;
+    }
+    &.padding-medium {
+      padding: 15px;
+    }
+    &.padding-small {
+      padding: 10px;
+    }
+    &.padding-tiny {
+      padding: 5px;
+    }
+  }
+}

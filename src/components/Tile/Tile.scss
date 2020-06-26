@@ -1,0 +1,17 @@
+@import "../../constants/_variables.scss";
+
+.tile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $tile-background;
+  padding: 0 25px;
+  .date{
+    font-size: $smaller;
+  }
+  .time{
+    font-size: $medium;
+    font-weight: bold;
+  }
+}

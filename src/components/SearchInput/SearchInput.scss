@@ -1,0 +1,21 @@
+@import "../../constants/_variables.scss";
+
+.search-input-wrapper {
+  .search-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    border: 0;
+    &::placeholder {
+      color: $search-placeholder;
+    }
+    /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      color: $search-placeholder;
+    }
+    /* Microsoft Edge */
+    &::-ms-input-placeholder {
+      color: $search-placeholder;
+    }
+  }
+}
