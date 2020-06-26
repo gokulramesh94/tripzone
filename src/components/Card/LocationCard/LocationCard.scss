@@ -1,0 +1,27 @@
+@import "../../../constants/_variables.scss";
+
+.location-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .location-image {
+    height: 150px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .location-details {
+    margin-top: 10px;
+    .landmark {
+      font-size: $medium;
+      font-weight: bold;
+    }
+    .location {
+      font-size: $regular;
+    }
+  }
+}

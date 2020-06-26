@@ -1,0 +1,15 @@
+@import "../../constants/_variables.scss";
+
+.select-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  .label-text {
+    font-size: $medium;
+    margin-bottom: 5px;
+  }
+  select.select-box {
+    padding: 5px 10px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: $small;
+  }
+}
