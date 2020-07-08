@@ -38,6 +38,13 @@
       }
     }
   }
+  .no-items-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px;
+  }
 }
 
 @media only screen and (max-width: 900px) {

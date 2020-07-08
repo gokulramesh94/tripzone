@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./SelectBox.scss";
 
 function SelectBox({ labelText, data, value, handleChange }) {
+  console.log("SelectBox");
   const renderOptions = () => {
     let options = [];
     data &&
@@ -26,11 +28,23 @@ function SelectBox({ labelText, data, value, handleChange }) {
         value={value}
         onChange={event => handleChange(event.target.value)}
       >
-        <option>{`Pick your ${labelText}`}</option>
+        <option value="">{`Pick your ${labelText}`}</option>
         {renderOptions()}
       </select>
     </div>
   );
 }
 
-export default SelectBox;
+SelectBox.defaultProps = {
+  labelText: "",
+  data: [],
+  value: ""
+};
+
+SelectBox.propTypes = {
+  labelText: PropTypes.string,
+  data: PropTypes.array,
+  value: PropTypes.string
+};
+
+export default React.memo(SelectBox);

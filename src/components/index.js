@@ -4,6 +4,7 @@ import { FlightCard, LocationCard } from "./Card";
 import Container from "./Container/Container";
 import DiscountDisplayer from "./DiscountDisplayer/DiscountDisplayer";
 import Header from "./Header/Header";
+import Loader from "./Loader/Loader";
 import { FlightList, LocationList } from "./List";
 import SearchInput from "./SearchInput/SearchInput";
 import SelectBox from "./SelectBox/SelectBox";
@@ -17,6 +18,7 @@ export {
   FlightCard,
   FlightList,
   Header,
+  Loader,
   LocationCard,
   LocationList,
   SearchInput,

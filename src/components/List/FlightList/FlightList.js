@@ -6,6 +6,7 @@ import { Strings } from "../../../constants";
 import "./FlightList.scss";
 
 const FlightList = props => {
+  console.log("FlightList");
   const _renderFlightTiles = () => {
     let flightList = [];
     if (props.data.length === 0) {
@@ -47,4 +48,4 @@ FlightList.propTypes = {
   data: PropTypes.array.isRequired
 };
 
-export default FlightList;
+export default React.memo(FlightList);
