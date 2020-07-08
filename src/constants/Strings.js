@@ -23,7 +23,7 @@ const Strings = {
       }
     },
     DATE_TIME_FORMAT: {
-      TIME: "hh:mm",
+      TIME: "HH:mm",
       DATE: "DD MMM YY"
     },
     HOME_SCREEN: {

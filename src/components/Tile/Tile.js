@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./Tile.scss";
 
 function Tile({ title, time }) {
+  console.log("Tile");
   return (
     <div className="tile-container">
       <div className="date">
@@ -25,4 +26,4 @@ Tile.propTypes = {
   time: PropTypes.string
 };
 
-export default Tile;
+export default React.memo(Tile);

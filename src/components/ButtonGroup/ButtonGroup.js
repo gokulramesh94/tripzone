@@ -1,8 +1,10 @@
 import React from "react";
 import { Button } from "../../components";
+import PropTypes from "prop-types";
 import "./ButtonGroup.scss";
 
-function ButtonGroup({ data, handleclick }) {
+function ButtonGroup({ data, selectedItem, handleclick }) {
+  console.log("ButtonGroup");
   const renderButtons = () => {
     let buttonList = [];
     data &&
@@ -10,6 +12,7 @@ function ButtonGroup({ data, handleclick }) {
         buttonList.push(
           <Button
             text={item.BUTTON_TEXT}
+            theme={selectedItem === item.VALUE ? 'light' : 'dark'}
             size="small"
             onClick={() => handleclick(item.VALUE)}
             key={index}
@@ -25,4 +28,14 @@ function ButtonGroup({ data, handleclick }) {
   );
 }
 
-export default ButtonGroup;
+ButtonGroup.defaultProps = {
+  data: [],
+  selectedItem: 0
+};
+
+ButtonGroup.propTypes = {
+  data: PropTypes.array.isRequired,
+  selectedItem: PropTypes.number
+};
+
+export default React.memo(ButtonGroup);

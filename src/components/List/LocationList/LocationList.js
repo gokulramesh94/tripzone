@@ -5,15 +5,20 @@ import { LocationCard } from "../../../components";
 import "./LocationList.scss";
 
 const LocationList = props => {
+  console.log("LocationList");
   const _renderLocationTiles = () => {
     let locationList = [];
-    props.data.forEach((item, index) => {
-      locationList.push(
-        <div className="cards" key={index}>
-          <LocationCard data={item} />
-        </div>
-      );
-    });
+    if (props.data.length === 0) {
+      locationList.push(<div className="no-items-wrapper" key={0}>No Locations to Display!</div>);
+    } else {
+      props.data.forEach((item, index) => {
+        locationList.push(
+          <div className="cards" key={index}>
+            <LocationCard data={item} />
+          </div>
+        );
+      });
+    }
     return locationList;
   };
 
@@ -34,4 +39,4 @@ LocationList.propTypes = {
   column: PropTypes.string
 };
 
-export default LocationList;
+export default React.memo(LocationList);

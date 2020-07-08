@@ -4,12 +4,12 @@ import { Images } from "../../../constants";
 import { CityContext } from "../../../App";
 import { filterData } from "../../../utils/filter";
 import * as moment from "moment";
+import PropTypes from "prop-types";
 import "./FlightCard.scss";
 
 function FlightCard({ data, handleBooking }) {
-  console.log(data);
   const cityList = useContext(CityContext);
-  const { source, dest, date, price } = data || {};
+  const { source, dest, date, price } = data;
   let sourceCity = cityList && filterData(cityList, "code", source)[0];
   let destinationCity = cityList && filterData(cityList, "code", dest)[0];
   return (
@@ -31,4 +31,12 @@ function FlightCard({ data, handleBooking }) {
   );
 }
 
-export default FlightCard;
+FlightCard.defaultProps = {
+  data: {}
+};
+
+FlightCard.propTypes = {
+  data: PropTypes.object,
+};
+
+export default React.memo(FlightCard);

@@ -20,6 +20,7 @@
   &.light {
     background-color: $white;
     border: 1px solid $button-primary;
+    color: $button-primary;
     &:hover{
       background-color: $button-primary;
       color: $white;
