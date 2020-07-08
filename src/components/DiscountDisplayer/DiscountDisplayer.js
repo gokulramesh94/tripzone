@@ -2,6 +2,7 @@ import React from "react";
 import "./DiscountDisplayer.scss";
 
 function DiscountDisplayer({ title, price }) {
+  console.log("DiscountDisplayer");
   return (
     <div className="discount-displayer-wrapper">
       <div className="discount-displayer-title">
@@ -12,4 +13,4 @@ function DiscountDisplayer({ title, price }) {
   );
 }
 
-export default DiscountDisplayer;
+export default React.memo(DiscountDisplayer);

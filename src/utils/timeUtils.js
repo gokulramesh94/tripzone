@@ -7,8 +7,8 @@ export const getDateTime = (currentDateTime, offset) => {
     return {};
   }
   const dateVal = offset
-    ? date.utcOffset(offset).format(Strings.APPLICATION.DATE_TIME_FORMAT.DATE)
-    : date.format(Strings.APPLICATION.DATE_TIME_FORMAT.DATE);
+    ? date.utcOffset(offset).format(Strings.APPLICATION.DATE_TIME_FORMAT.DATE).toUpperCase()
+    : date.format(Strings.APPLICATION.DATE_TIME_FORMAT.DATE).toUpperCase();
   const timeVal = offset
     ? date.utcOffset(offset).format(Strings.APPLICATION.DATE_TIME_FORMAT.TIME)
     : date.format(Strings.APPLICATION.DATE_TIME_FORMAT.TIME);

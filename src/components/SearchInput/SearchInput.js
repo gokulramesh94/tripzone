@@ -1,7 +1,9 @@
 import React, { useRef, useImperativeHandle } from "react";
+import PropTypes from "prop-types";
 import "./SearchInput.scss";
 
 const SearchInput = React.forwardRef(({ value, onChange, onEnter }, ref) => {
+  console.log("SearchInput");
   const inputRef = useRef();
   useImperativeHandle(ref, () => ({
     focus: () => {
@@ -23,4 +25,12 @@ const SearchInput = React.forwardRef(({ value, onChange, onEnter }, ref) => {
   );
 });
 
-export default SearchInput;
+SearchInput.defaultProps = {
+  value: ""
+};
+
+SearchInput.propTypes = {
+  value: PropTypes.string,
+};
+
+export default React.memo(SearchInput);

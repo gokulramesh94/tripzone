@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./Container.scss";
 
 const Container = props => {
+  console.log("Container");
   return (
     <div className={`tripzone-container ${props.color} ${props.size} ${props.padding}`}>
       {props.children}
