@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button } from "../../../components";
+import { Button, Image } from "../../../components";
 import { Images } from "../../../constants";
 import { CityContext } from "../../../App";
 import { filterData } from "../../../utils/filter";
@@ -15,7 +15,7 @@ function FlightCard({ data, handleBooking }) {
   return (
     <div className="flight-card-wrapper">
       <div className="image-wrapper">
-        <img src={Images.AIR_INDIA} alt="Air India Logo" />
+        <Image source={Images.AIR_INDIA} altText="Air India Logo" />
       </div>
       <div className="flight-details">
         <div className="date">
@@ -36,7 +36,7 @@ FlightCard.defaultProps = {
 };
 
 FlightCard.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object
 };
 
 export default React.memo(FlightCard);

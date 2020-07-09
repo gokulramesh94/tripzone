@@ -3,10 +3,10 @@ import {
   Container,
   FlightList
 } from "../../../components";
-import { BookingSection } from "../../pages";
+import { Booking } from "../../../components";
 import { Strings } from "../../../constants";
 
-function AvailableFlightsSection({ flights }) {
+function AvailableFlights({ flights }) {
   
   const [selectedFlight, setSelectedFlight] = useState();
   const _handleBooking = value => {
@@ -30,9 +30,9 @@ function AvailableFlightsSection({ flights }) {
           />
         </Container>
       </div>
-      {selectedFlight ? <BookingSection data={selectedFlight} /> : null}
+      {selectedFlight ? <Booking data={selectedFlight} /> : null}
     </div>
   );
 }
 
-export default React.memo(AvailableFlightsSection);
+export default React.memo(AvailableFlights);

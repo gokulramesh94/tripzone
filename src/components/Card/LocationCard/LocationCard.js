@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Image } from "../../../components";
 import "./LocationCard.scss";
 
 function LocationCard({ data }) {
   console.log("LocationCard");
   const { landmark, location, photo } = data;
+
   return (
     <div className="location-card-wrapper">
       <div className="location-image">
-        <img src={photo} alt={landmark} />
+        <Image source={photo} altText={landmark} />
       </div>
       <div className="location-details">
         <div className="landmark">
-          {landmark || 'NA'}
+          {landmark || "NA"}
         </div>
         <div className="location">
           {location}
@@ -27,7 +29,7 @@ LocationCard.defaultProps = {
 };
 
 LocationCard.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object
 };
 
 export default LocationCard;

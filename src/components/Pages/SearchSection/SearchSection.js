@@ -11,7 +11,7 @@ import { CityContext } from "../../../App";
 import "./SearchSection.scss";
 
 const SearchSection = React.forwardRef(
-  ({ previousSearchText, setPreviousSearchText, cityInfo }, ref) => {
+  ({ cityInfo }, ref) => {
     const [searchText, setSearchText] = useState("");
     const cities = useContext(CityContext) || [];
     const inputRef = useRef();
@@ -30,7 +30,6 @@ const SearchSection = React.forwardRef(
         let city = filterData(cities, "name", searchText);
         if (city.length !== 0) {
           let cityCode = city[0].code || "";
-          setPreviousSearchText([...previousSearchText, cityCode]);
           cityInfo(cityCode);
           setSearchText("");
         } else {

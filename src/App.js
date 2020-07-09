@@ -1,12 +1,12 @@
 import React from "react";
-import HomeScreen from "./screens/HomeScreen";
+import { Routes } from "./routes";
 import "./App.scss";
 
 export const UserContext = React.createContext({});
 export const CityContext = React.createContext([]);
 
 function App() {
-  return <HomeScreen />;
+  return <Routes />;
 }
 
 export default App;

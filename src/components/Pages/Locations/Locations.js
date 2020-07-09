@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import { Container, Loader, LocationList } from "../../../components";
 import { Strings } from "../../../constants";
 import { getTouristSpots } from "../../../services";
-import "./LocationSection.scss";
+import "./Locations.scss";
 
-function LocationSection() {
+function Locations() {
   const [allLocations, setAllLocations] = useState([]);
   const loader = useRef();
 
@@ -45,4 +45,4 @@ function LocationSection() {
   );
 }
 
-export default LocationSection;
+export default React.memo(Locations);
