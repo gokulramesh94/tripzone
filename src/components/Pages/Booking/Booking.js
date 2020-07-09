@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import {
   Button,
   ButtonGroup,
@@ -7,9 +7,9 @@ import {
 } from "../../../components";
 import { Images, Strings } from "../../../constants";
 import { UserContext } from "../../../App";
-import "./BookingSection.scss";
+import "./Booking.scss";
 
-function BookingSection({ data }) {
+function Booking({ data }) {
   const userInfo = useContext(UserContext);
   const [discount, setDiscount] = useState(0);
   const [tax, setTax] = useState(5);
@@ -48,7 +48,12 @@ function BookingSection({ data }) {
                 .BUTTON_GROUP.MEMBERSHIP_DISCOUNT
             }
             selectedItem={discount}
-            handleclick={value => setDiscount(value)}
+            handleclick={useCallback(
+              value => {
+                setDiscount(value);
+              },
+              []
+            )}
           />
           <div className="description">
             {
@@ -62,7 +67,12 @@ function BookingSection({ data }) {
                 .BUTTON_GROUP.TAX_AMOUNT
             }
             selectedItem={tax}
-            handleclick={value => setTax(value)}
+            handleclick={useCallback(
+              value => {
+                setTax(value);
+              },
+              []
+            )}
           />
           <div className="description">
             {
@@ -75,15 +85,15 @@ function BookingSection({ data }) {
             size="large"
             onClick={() => alert("Payment Successful!")}
           />
-          {userInfo && userInfo.prime === "true"
-            ? <div className="prime-logo-wrapper">
-                <img src={Images.PRIME} alt="Prime logo" />
-              </div>
-            : null}
+          {userInfo &&
+            userInfo.prime === "true" &&
+            <div className="prime-logo-wrapper">
+              <img src={Images.PRIME} alt="Prime logo" />
+            </div>}
         </div>
       </Container>
     </div>
   );
 }
 
-export default BookingSection;
+export default React.memo(Booking);

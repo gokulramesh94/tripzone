@@ -86,6 +86,10 @@ const Strings = {
           TITLE: "The World is Beautiful. Keep Travelling."
         }
       }
+    },
+    ROUTES: {
+      HOME: "/",
+      ALL: "*"
     }
   }
 };
