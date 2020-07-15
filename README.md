@@ -11,7 +11,6 @@ This project covers the concepts specified below,
         - useRef
         - useState
     Custom Hooks
-    Error Boundaries
     
 I have solely focused on functional component. This project does not include
 
