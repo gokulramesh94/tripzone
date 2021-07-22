@@ -1,9 +1,9 @@
 import { getFlights } from "./FlightService";
-import { getWorldClocks } from "./TimeZoneService";
+import { getIST, getWorldClocks } from "./TimeZoneService";
 import {
   getCities,
   getCityInformation,
-  getTouristSpots
+  getTouristSpots,
 } from "./TourismService";
 import { loginUser } from "./UserInfoService";
 
@@ -11,7 +11,8 @@ export {
   getCities,
   getCityInformation,
   getFlights,
+  getIST,
   getTouristSpots,
   getWorldClocks,
-  loginUser
+  loginUser,
 };
