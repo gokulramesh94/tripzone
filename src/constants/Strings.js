@@ -6,25 +6,26 @@ const Strings = {
       CITY_INFO: "/city",
       TOURIST_SPOTS: "/tourism",
       FLIGHTS: "/flights",
-      WORLD_CLOCK: "http://worldclockapi.com/api/json/est/now"
+      WORLD_CLOCK: "http://worldclockapi.com/api/json/est/now",
+      IST: "https://worldtimeapi.org/api/timezone/Asia/Kolkata",
     },
     USER_DETAILS: {
       NIJIN: {
         username: "nijin",
-        password: "password"
+        password: "password",
       },
       NIRANJAN: {
         username: "niranjan",
-        password: "password"
+        password: "password",
       },
       ASHOK: {
         username: "ashok",
-        password: "password"
-      }
+        password: "password",
+      },
     },
     DATE_TIME_FORMAT: {
       TIME: "HH:mm",
-      DATE: "DD MMM YY"
+      DATE: "DD MMM YY",
     },
     HOME_SCREEN: {
       CONTAINER_TEXT: {
@@ -34,10 +35,10 @@ const Strings = {
           TEXT_CONTENT_ONE:
             "Take every choice you get in your life, because some things will happen only once. Once in a while go somewhere you have never been before.",
           TEXT_CONTENT_TWO:
-            "With TripZone, you could book amazing holiday spots with low fares. We understand how travelling can impact your budget."
+            "With TripZone, you could book amazing holiday spots with low fares. We understand how travelling can impact your budget.",
         },
         CONTAINER_TWO: {
-          TITLE: "PLAN MY TRIP"
+          TITLE: "PLAN MY TRIP",
         },
         CONTAINER_THREE: {
           TITLE: "BOOK NOW",
@@ -51,47 +52,47 @@ const Strings = {
             MEMBERSHIP_DISCOUNT: [
               {
                 BUTTON_TEXT: "1 YEAR",
-                VALUE: 5
+                VALUE: 5,
               },
               {
                 BUTTON_TEXT: "2 YEAR",
-                VALUE: 10
+                VALUE: 10,
               },
               {
                 BUTTON_TEXT: "3 YEAR",
-                VALUE: 15
-              }
+                VALUE: 15,
+              },
             ],
             TAX_AMOUNT: [
               {
                 BUTTON_TEXT: "10%",
-                VALUE: 10
+                VALUE: 10,
               },
               {
                 BUTTON_TEXT: "20%",
-                VALUE: 20
+                VALUE: 20,
               },
               {
                 BUTTON_TEXT: "30%",
-                VALUE: 30
-              }
-            ]
-          }
+                VALUE: 30,
+              },
+            ],
+          },
         },
         CONTAINER_FOUR: {
           TITLE: "AVAILABLE FLIGHTS",
-          NO_FLIGHTS: "No Flights Found!"
+          NO_FLIGHTS: "No Flights Found!",
         },
         CONTAINER_SIX: {
-          TITLE: "The World is Beautiful. Keep Travelling."
-        }
-      }
+          TITLE: "The World is Beautiful. Keep Travelling.",
+        },
+      },
     },
     ROUTES: {
       HOME: "/",
-      ALL: "*"
-    }
-  }
+      ALL: "*",
+    },
+  },
 };
 
 export default Strings;
